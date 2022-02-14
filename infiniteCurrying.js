@@ -9,5 +9,5 @@ function add2(...args) {
   return args.reduce((val, next) => (val += next));
 }
 
-console.log(add(5)(2)(4)(8)());
-console.log(add2(5, 2, 4, 8));
+console.log(add(2)(8)(5)(10)()); //Output: 25
+console.log(add2(2, 8, 5, 10)); //Output: 25

@@ -5,7 +5,7 @@ const a = {
   },
 };
 
-if (a == 1 && a == 2 && a == 3) {
+if (a == 1 && a == 2 && a == 3) { // Output: true
   console.log(true);
 } else {
   console.log(false);
