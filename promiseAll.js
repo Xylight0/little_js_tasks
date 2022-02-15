@@ -7,12 +7,14 @@ function showText(text, time) {
 }
 
 function myPromiseAll(promises) {
-  let result = [];
+  let result = new Array(promises.length);
+  let counter = 0;
   return new Promise((resolve, reject) => {
     promises.forEach((e, index) => {
       e.then((res) => {
-        result.push(res);
-        if (index === promises.length - 2) resolve(result);
+        result[index] = res;
+        if (counter === promises.length - 1) resolve(result);
+        counter++;
       }).catch((err) => reject(err));
     });
   });
